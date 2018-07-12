@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="AWS IoT Button Hits" max_length="40" name="x_snc_aws_iot_butt_aws_iot_button" type="collection">
+        <element display="true" label="Button" max_length="32" name="button" reference="x_snc_aws_iot_butt_aws_button_registry" type="reference"/>
+        <element choice="1" label="Click type" max_length="40" name="click_type" type="choice">
+            <choice>
+                <element label="DOUBLE" value="DOUBLE"/>
+                <element label="LONG" value="LONG"/>
+                <element label="SINGLE" value="SINGLE"/>
+            </choice>
+        </element>
+        <element label="Voltage" max_length="40" name="voltage" type="integer"/>
+        <index name="index">
+            <element name="button"/>
+        </index>
+    </element>
+</database>

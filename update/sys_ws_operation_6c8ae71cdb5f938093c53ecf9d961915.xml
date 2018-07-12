@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Dash Button</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	gs.info("Dash SNAPI: body: " + JSON.stringify(request.body.data));
+	
+	var button_id = request.body.data.serialNumber;
+	var voltage = parseInt(request.body.data.batteryVoltage.replace('mV', ''), 10);
+	var clicktype = request.body.data.clickType;
+	
+	var hit = new GlideRecord('x_snc_aws_iot_butt_aws_iot_button');
+	hit.newRecord();
+	hit.button = getButtonID(button_id);
+	
+	if (hit.button){
+		hit.voltage = voltage;
+		hit.click_type = clicktype;
+		hit.insert();
+	} else {
+		response.setStatus(403);
+		answer.status = "UGH!";
+	}
+	
+	
+var answer = {};
+	
+	answer.status = "OK";
+	response.setBody(answer);
+	
+	// implement resource here
+	
+	
+	function getButtonID(id){
+		var reg = new GlideRecord('x_snc_aws_iot_butt_aws_button_registry');
+		if (reg.get('id',id)) {
+			return reg.getValue('sys_id');
+		}
+	}
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_snc_aws_iot_butt/aws_iot_button</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>doug.bagley</sys_created_by>
+        <sys_created_on>2018-07-10 23:32:29</sys_created_on>
+        <sys_id>6c8ae71cdb5f938093c53ecf9d961915</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Dash Button</sys_name>
+        <sys_package display_value="AWS_IOT_Button" source="x_snc_aws_iot_butt">6de826ccdbdb538093c53ecf9d9619b5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AWS_IOT_Button">6de826ccdbdb538093c53ecf9d9619b5</sys_scope>
+        <sys_update_name>sys_ws_operation_6c8ae71cdb5f938093c53ecf9d961915</sys_update_name>
+        <sys_updated_by>doug.bagley</sys_updated_by>
+        <sys_updated_on>2018-07-11 00:22:17</sys_updated_on>
+        <web_service_definition display_value="AWS_IoT_Button">15596eccdbdb538093c53ecf9d9619b0</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

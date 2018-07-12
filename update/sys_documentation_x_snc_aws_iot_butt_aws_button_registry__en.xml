@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="" label="AWS Button Registry" language="en" table="x_snc_aws_iot_butt_aws_button_registry">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>AWS Button Registry</label>
+            <language>en</language>
+            <name>x_snc_aws_iot_butt_aws_button_registry</name>
+            <plural>AWS Button Registries</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>doug.bagley</sys_created_by>
+            <sys_created_on>2018-07-10 23:58:37</sys_created_on>
+            <sys_id>e8907390db9f938093c53ecf9d961939</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>AWS Button Registry</sys_name>
+            <sys_package display_value="AWS_IOT_Button" source="x_snc_aws_iot_butt">6de826ccdbdb538093c53ecf9d9619b5</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AWS_IOT_Button">6de826ccdbdb538093c53ecf9d9619b5</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_aws_iot_butt_aws_button_registry__en</sys_update_name>
+            <sys_updated_by>doug.bagley</sys_updated_by>
+            <sys_updated_on>2018-07-10 23:58:37</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

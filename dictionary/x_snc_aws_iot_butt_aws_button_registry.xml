@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="AWS Button Registry" max_length="40" name="x_snc_aws_iot_butt_aws_button_registry" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element default="100" display="true" label="Description" max_length="40" name="description" type="string"/>
+        <element label="ID" max_length="40" name="id" type="string"/>
+    </element>
+</database>

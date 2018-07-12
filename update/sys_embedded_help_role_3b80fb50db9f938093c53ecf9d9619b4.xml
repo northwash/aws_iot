@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_snc_aws_iot_butt.aws_button_registry_user" name="x_snc_aws_iot_butt.aws_button_registry_user">7b80fb50db9f938093c53ecf9d9619b1</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>doug.bagley</sys_created_by>
+        <sys_created_on>2018-07-10 23:58:34</sys_created_on>
+        <sys_id>3b80fb50db9f938093c53ecf9d9619b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>7b80fb50db9f938093c53ecf9d9619b1</sys_name>
+        <sys_package display_value="AWS_IOT_Button" source="x_snc_aws_iot_butt">6de826ccdbdb538093c53ecf9d9619b5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AWS_IOT_Button">6de826ccdbdb538093c53ecf9d9619b5</sys_scope>
+        <sys_update_name>sys_embedded_help_role_3b80fb50db9f938093c53ecf9d9619b4</sys_update_name>
+        <sys_updated_by>doug.bagley</sys_updated_by>
+        <sys_updated_on>2018-07-10 23:58:34</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
